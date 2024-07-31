@@ -5,106 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Investor</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #0070f3;
+            --background-color: #ffffff;
+            --text-color: #333333;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
+
         header {
-            background-color: #f4f4f4;
-            padding: 20px;
             text-align: center;
+            margin-bottom: 60px;
         }
-        nav {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
-        nav ul {
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .list {
             list-style-type: none;
             padding: 0;
         }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
+
+        .list li {
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        nav ul li a {
-            color: #fff;
+
+        .list li:hover {
+            background-color: #e8e8e8;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
-        section {
-            margin-bottom: 30px;
+
+        .contact-info a:hover {
+            color: #0056b3;
         }
-        h1, h2 {
-            color: #2c3e50;
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Investor | Deal Sourcer | Analyst</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p class="subtitle">Investor | Deal Sourcer | Analyst</p>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#deals">Deals</a></li>
-            <li><a href="#investments">Investments</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Brief introduction about yourself and your investment philosophy. Focus on what makes you unique and the value you bring to potential deals and partners.</p>
+        </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Brief introduction about yourself and your investment philosophy.</p>
-    </section>
+        <section class="section">
+            <h2>Deals Sourced & Diligenced</h2>
+            <ul class="list">
+                <li>Deal 1 - Brief description or key metrics</li>
+                <li>Deal 2 - Brief description or key metrics</li>
+                <li>Deal 3 - Brief description or key metrics</li>
+            </ul>
+        </section>
 
-    <section id="deals">
-        <h2>Deals Sourced & Diligenced</h2>
-        <ul>
-            <li>Deal 1</li>
-            <li>Deal 2</li>
-            <li>Deal 3</li>
-        </ul>
-    </section>
+        <section class="section">
+            <h2>Personal Investments</h2>
+            <ul class="list">
+                <li>Investment 1 - Company name and your role</li>
+                <li>Investment 2 - Company name and your role</li>
+                <li>Investment 3 - Company name and your role</li>
+            </ul>
+        </section>
 
-    <section id="investments">
-        <h2>Personal Investments</h2>
-        <ul>
-            <li>Investment 1</li>
-            <li>Investment 2</li>
-            <li>Investment 3</li>
-        </ul>
-    </section>
+        <section class="section">
+            <h2>Experience</h2>
+            <ul class="list">
+                <li>Position at Company - Brief description of role and achievements</li>
+                <li>Position at Company - Brief description of role and achievements</li>
+                <li>Position at Company - Brief description of role and achievements</li>
+            </ul>
+        </section>
 
-    <section id="resume">
-        <h2>Resume & Experience</h2>
-        <ul>
-            <li>Experience 1</li>
-            <li>Experience 2</li>
-            <li>Experience 3</li>
-        </ul>
-    </section>
-
-    <section id="blog">
-        <h2>Blog</h2>
-        <article>
-            <h3>Blog Post Title</h3>
-            <p>Brief excerpt from the blog post...</p>
-        </article>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        <p>Twitter: @yourhandle</p>
-    </section>
+        <section class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
